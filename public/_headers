@@ -1,0 +1,5 @@
+# Netlify reads this file from the site root.
+# The itinerary must never be served from cache, or a family member gets yesterday's plan.
+/events.enc.json
+  cache-control: no-cache, no-store, must-revalidate
+  x-robots-tag: noindex

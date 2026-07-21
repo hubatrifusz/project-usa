@@ -1,0 +1,19 @@
+{
+  "title": "Magyarország",
+  "now": "Most",
+  "focusCurrent": "Ugrás a jelenre",
+  "navigate": "Navigáció",
+  "today": "Ma",
+  "updated": "A program frissült",
+  "gate": {
+    "title": "Üdv!",
+    "hint": "Add meg a családi jelszót a belépéshez.",
+    "passphrase": "Jelszó",
+    "unlock": "Bejelentkezés",
+    "showPassphrase": "Jelszó megjelenítése",
+    "hidePassphrase": "Jelszó elrejtése",
+    "wrongPassphrase": "Helytelen jelszó.",
+    "offline": "Nem sikerült elérni a programot. Ellenőrizd a kapcsolatot, és próbáld újra.",
+    "insecureContext": "Ezt az oldalt https-en kell megnyitni. A böngésző sima http címen letiltja a visszafejtést."
+  }
+}

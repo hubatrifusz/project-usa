@@ -1,0 +1,19 @@
+{
+  "title": "Hungary",
+  "now": "Now",
+  "focusCurrent": "Jump to now",
+  "navigate": "Navigate",
+  "today": "Today",
+  "updated": "Plans updated",
+  "gate": {
+    "title": "Hi!",
+    "hint": "Enter the family passphrase to see the brilliant plan.",
+    "passphrase": "Passphrase",
+    "unlock": "Sign in",
+    "showPassphrase": "Show passphrase",
+    "hidePassphrase": "Hide passphrase",
+    "wrongPassphrase": "That passphrase didn't work. Check for typos.",
+    "offline": "That didn't work. Check your connection and try again.",
+    "insecureContext": "This page has to be opened over https. Browsers block decryption on a plain http address."
+  }
+}

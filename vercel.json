@@ -1,0 +1,13 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": ".output/public",
+  "headers": [
+    {
+      "source": "/events.enc.json",
+      "headers": [
+        { "key": "cache-control", "value": "no-cache, no-store, must-revalidate" },
+        { "key": "x-robots-tag", "value": "noindex" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/**
+ * "Magyar népmesék" theme.
+ *
+ * One accent, used sparingly:
+ *   madder (red) = now / act — the current event, and the buttons you press.
+ * Everything structural (titles, day headers, the rail, dividers) is drawn from the
+ * warm linen neutral, which is what lets the red mean something wherever it appears.
+ * Linen also makes pages read as paper rather than white, and lands dark mode on a
+ * warm near-black (Matyó: vivid florals on black) rather than grey.
+ */
+@theme static {
+  /* Madder red — the folk-tale title-card red. */
+  --color-madder-50: #fbeae8;
+  --color-madder-100: #f6d2ce;
+  --color-madder-200: #eda9a2;
+  --color-madder-300: #e17d73;
+  --color-madder-400: #d9564b;
+  --color-madder-500: #b4231f;
+  --color-madder-600: #991b18;
+  --color-madder-700: #7c1613;
+  --color-madder-800: #5f110f;
+  --color-madder-900: #430c0b;
+  --color-madder-950: #2a0706;
+
+  /* Linen — warm paper through to espresso. Carries all the structure. */
+  --color-linen-50: #faf4e8;
+  --color-linen-100: #f3ead8;
+  --color-linen-200: #e7d8be;
+  --color-linen-300: #d6c09b;
+  --color-linen-400: #b7a078;
+  --color-linen-500: #8c7856;
+  --color-linen-600: #6b5a40;
+  --color-linen-700: #4a3e2c;
+  --color-linen-800: #33291c;
+  --color-linen-900: #241c17;
+  --color-linen-950: #17110e;
+
+  /* The single typographic gesture: storybook serif for titles only. */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+}
+
+/* Page sits on paper, not white — cards then rise out of it via bg-elevated. */
+:root {
+  --ui-bg: var(--ui-color-neutral-50);
+}
+
+.dark {
+  --ui-bg: var(--ui-color-neutral-950);
+}
