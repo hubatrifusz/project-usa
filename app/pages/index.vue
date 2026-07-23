@@ -393,8 +393,8 @@ const todayKey = computed(() => (now.value ? tripDateKey(now.value) : null))
       </section>
 
       <Transition
-        enter-active-class="transition duration-200"
-        leave-active-class="transition duration-150"
+        enter-active-class="!transition-all !duration-200"
+        leave-active-class="!transition-all !duration-150"
         enter-from-class="translate-y-2 opacity-0"
         leave-to-class="translate-y-2 opacity-0"
       >

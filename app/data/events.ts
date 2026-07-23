@@ -28,235 +28,299 @@ export interface VacationEvent {
 
 /**
  * The plan. Order doesn't matter — events are sorted by `time` automatically.
- *
- * Placeholder data: a five-day Hungary trip, 19–23 July 2026, so the middle day is
- * "today". Coordinates are approximate — replace them with real ones from Google Maps.
  */
 export const events: VacationEvent[] = [
-  // ── Sunday 19 July — arrival ────────────────────────────────────────────────
+  // ── Friday 24 July — arrival ────────────────────────────────────────────────
   {
     id: 'arrival',
-    time: '2026-07-19T13:40',
+    time: '2026-07-24T17:35',
     title: {
-      en: 'Landing in Budapest',
-      hu: 'Landolás Budapesten',
+      en: 'Arrival & Pickup in Vienna',
+      hu: 'Érkezés és felvétel Bécsben',
     },
     location: {
-      en: 'Liszt Ferenc Airport, Terminal 2A',
-      hu: 'Liszt Ferenc repülőtér, 2A terminál',
+      en: 'Vienna International Airport, Terminal 1',
+      hu: 'Bécs-Schwechati nemzetközi repülőtér, 1-es terminál',
     },
-    mapQuery: '47.4370,19.2611',
+    mapQuery: '48.12098687715911,16.563444463544165',
     description: {
-      en: 'Pick up the rental car at the desk in arrivals, then straight to the flat.',
-      hu: 'Autóbérlés az érkezési oldalon, aztán irány egyenesen a lakás.',
-    },
-  },
-  {
-    id: 'apartment',
-    time: '2026-07-19T15:30',
-    title: {
-      en: 'Check in at the apartment',
-      hu: 'Beköltözés a lakásba',
-    },
-    location: {
-      en: 'District VII, Dob utca',
-      hu: 'VII. kerület, Dob utca',
-    },
-    mapQuery: '47.4979,19.0632',
-    description: {
-      en: 'Key box code is 4471. Parking is in the courtyard — the gate remote is on the shelf.',
-      hu: 'A kulcsszéf kódja 4471. A parkoló az udvarban van, a kapunyitó a polcon.',
+      en: 'Flight arrival, luggage pick-up, and drive to Bábolna.',
+      hu: 'Megérkezés, csomagfelvétel és indulás Bábolnára.',
     },
   },
   {
     id: 'first-dinner',
-    time: '2026-07-19T19:00',
+    time: '2026-07-24T20:00',
     title: {
       en: 'First dinner',
       hu: 'Első vacsora',
     },
-    // No `location` yet — so no pin and no navigation button on this card.
+    location: {
+      en: 'Bábolna, Radnóti Miklós Street 32',
+      hu: 'Bábolna, Radnóti Miklós utca 32',
+    },
     description: {
-      en: "Somewhere on Kazinczy utca. We'll decide when we see who's still awake.",
-      hu: 'Valahol a Kazinczy utcában. Majd eldöntjük, ki bírja még ébren.',
+      en: 'Welcome dinner in Bábolna.',
+      hu: 'Üdvözlő vacsora Bábolnán.',
     },
   },
 
-  // ── Monday 20 July — Buda ───────────────────────────────────────────────────
+  // ── Saturday 25 July ───────────────────────────────────────────────────
   {
-    id: 'castle-hill',
-    time: '2026-07-20T09:30',
+    id: 'cemetery',
+    time: '2026-07-25T11:00',
     title: {
-      en: "Castle Hill & Fisherman's Bastion",
-      hu: 'Budai Vár és Halászbástya',
+      en: 'Cemetery visit in Tárkány',
+      hu: 'Tárkányi temető meglátogatása',
     },
     location: {
-      en: "Fisherman's Bastion, Buda Castle district",
-      hu: 'Halászbástya, Budai Várnegyed',
+      en: 'Tárkány cemetery',
+      hu: 'Tárkányi temető',
     },
-    mapQuery: '47.5025,19.0347',
+    mapQuery: '47.59634361674503,18.008711376913684',
     description: {
-      en: 'Funicular up from Clark Ádám tér. Go early — by eleven the terraces are packed.',
-      hu: 'Siklóval fel a Clark Ádám térről. Menjünk korán, tizenegyre megtelnek a teraszok.',
+      en: 'Visiting the cemetery in Tárkány.',
+      hu: 'Megemlékezés a tárkányi temetőben.',
     },
   },
   {
-    id: 'market-hall',
-    time: '2026-07-20T13:00',
+    id: 'tractor-driving',
+    time: '2026-07-25T12:30',
     title: {
-      en: 'Lunch at the Great Market Hall',
-      hu: 'Ebéd a Nagy Vásárcsarnokban',
+      en: 'Tractor driving at Agrotec',
+      hu: 'Traktorozás az Agrotecnél',
     },
     location: {
-      en: 'Great Market Hall, Fővám tér',
-      hu: 'Nagy Vásárcsarnok, Fővám tér',
+      en: 'Komárom, Puskás Tivadar Street 4/a',
+      hu: 'Komárom, Puskás Tivadar utca 4/a',
     },
-    mapQuery: '47.4869,19.0587',
+    mapQuery: '47.74420247284381,18.080009427475822',
     description: {
-      en: 'Lángos upstairs, paprika and honey downstairs for the people back home.',
-      hu: 'Lángos az emeleten, paprika és méz a földszinten az otthoniaknak.',
+      en: 'Tractor driving experience at Agrotec.',
+      hu: 'Traktorvezetés az Agrotecnél.',
     },
   },
   {
-    id: 'szechenyi-bath',
-    time: '2026-07-20T16:00',
+    id: 'quick-dinner',
+    time: '2026-07-25T14:00',
     title: {
-      en: 'Széchenyi Baths',
-      hu: 'Széchenyi fürdő',
+      en: 'Quick bite to eat',
+      hu: 'Gyors falatok',
     },
-    location: {
-      en: 'Széchenyi Thermal Bath, City Park',
-      hu: 'Széchenyi gyógyfürdő, Városliget',
-    },
-    mapQuery: '47.5187,19.0827',
     description: {
-      en: 'Bring flip-flops and a towel each. Lockers take a card.',
-      hu: 'Mindenki hozzon papucsot és törölközőt. A szekrény kártyával megy.',
-    },
-  },
-
-  // ── Tuesday 21 July — today ─────────────────────────────────────────────────
-  {
-    id: 'szentendre',
-    time: '2026-07-21T09:00',
-    title: {
-      en: 'Drive up to Szentendre',
-      hu: 'Kirándulás Szentendrére',
-    },
-    location: {
-      en: 'Szentendre, main square',
-      hu: 'Szentendre, Fő tér',
-    },
-    mapQuery: '47.6694,19.0759',
-    description: {
-      en: 'About 40 minutes along the Danube. Park by the river, the old town is pedestrian.',
-      hu: 'Kb. 40 perc a Duna mentén. A folyónál parkoljunk, az óváros sétálóutca.',
+      en: 'Quick lunch before the afternoon cookout.',
+      hu: 'Gyors ebéd a délutáni sütögetés előtt.',
     },
   },
   {
-    id: 'marzipan-museum',
-    time: '2026-07-21T11:30',
+    id: 'cookout',
+    time: '2026-07-25T16:00',
     title: {
-      en: 'Marzipan Museum',
-      hu: 'Marcipán Múzeum',
+      en: "Cookout at Zoli's",
+      hu: 'Sütögetés Zoliéknál',
     },
-    location: {
-      en: 'Dumtsa Jenő utca, Szentendre',
-      hu: 'Dumtsa Jenő utca, Szentendre',
-    },
-    mapQuery: '47.6684,19.0742',
     description: {
-      en: 'Small and silly, twenty minutes tops — but the kids will not forgive us if we skip it.',
-      hu: 'Kicsi és bugyuta, húsz perc az egész — de a gyerekek nem bocsátanák meg, ha kihagynánk.',
-    },
-  },
-  {
-    id: 'parliament',
-    time: '2026-07-21T16:00',
-    title: {
-      en: 'Parliament tour',
-      hu: 'Parlament látogatás',
-    },
-    location: {
-      en: 'Hungarian Parliament, Kossuth Lajos tér',
-      hu: 'Országház, Kossuth Lajos tér',
-    },
-    mapQuery: '47.5072,19.0455',
-    description: {
-      en: 'Booked for 16:00 sharp, gate X. Photo ID for everyone, late arrivals are turned away.',
-      hu: 'Pontban 16:00-ra foglaltuk, X. kapu. Mindenkinek kell fényképes igazolvány, a későket nem engedik be.',
-    },
-  },
-  {
-    id: 'danube-cruise',
-    time: '2026-07-21T20:30',
-    title: {
-      en: 'Evening cruise on the Danube',
-      hu: 'Esti dunai hajózás',
-    },
-    location: {
-      en: 'Dock 11, Vigadó tér',
-      hu: '11-es kikötő, Vigadó tér',
-    },
-    mapQuery: '47.4956,19.0490',
-    description: {
-      en: 'Boarding from 20:15. Take a jacket, it gets cold on the water once the lights come on.',
-      hu: 'Beszállás 20:15-től. Vigyünk kabátot, a vízen hűvös lesz, mire kigyúlnak a fények.',
+      en: 'Barbecue and evening hangout at Zoli’s.',
+      hu: 'Kerti sütögetés és összejövetel Zoliéknál.',
     },
   },
 
-  // ── Wednesday 22 July — Balaton ─────────────────────────────────────────────
+  // ── Sunday 26 July ─────────────────────────────────────────────────
   {
-    id: 'drive-balaton',
-    time: '2026-07-22T08:30',
+    id: 'pannonhalma',
+    time: '2026-07-26T10:30',
     title: {
-      en: 'Drive to Lake Balaton',
-      hu: 'Autóút a Balatonhoz',
+      en: 'Pannonhalma Archabbey',
+      hu: 'Kirándulás Pannonhalmára',
     },
     location: {
-      en: 'Tihany Abbey',
-      hu: 'Tihanyi Bencés Apátság',
+      en: 'Pannonhalma, Vár 1',
+      hu: 'Pannonhalma, Vár 1',
     },
-    mapQuery: '46.9139,17.8892',
+    mapQuery: '47.55297677961083,17.76036712145006',
     description: {
-      en: 'Roughly two hours on the M7. Buy the motorway sticker before we set off.',
-      hu: 'Nagyjából két óra az M7-esen. Indulás előtt vegyük meg az autópálya-matricát.',
+      en: 'Touring Pannonhalma Archabbey and grounds.',
+      hu: 'A Pannonhalmi Főapátság megtekintése.',
     },
   },
   {
-    id: 'balaton-swim',
-    time: '2026-07-22T14:00',
+    id: 'puspokvar',
+    time: '2026-07-26T13:00',
     title: {
-      en: 'Swimming at Balatonfüred',
-      hu: 'Fürdés Balatonfüreden',
+      en: 'Püspökvár Lookout Tower',
+      hu: 'Püspökvár látogatás',
     },
     location: {
-      en: 'Balatonfüred, Kisfaludy beach',
-      hu: 'Balatonfüred, Kisfaludy strand',
+      en: 'Győr, Káptalandomb 1',
+      hu: 'Győr, Káptalandomb 1',
     },
-    mapQuery: '46.9530,17.8900',
+    mapQuery: '47.68905103916751,17.630215350964875',
     description: {
-      en: 'Shallow for a long way out, good for the little ones. Ice cream on the promenade after.',
-      hu: 'Sokáig sekély, jó a kicsiknek. Utána fagyi a sétányon.',
+      en: 'Visiting the Bishop’s Castle and lookout tower.',
+      hu: 'A Püspökvár és kilátótorony meglátogatása.',
+    },
+  },
+  {
+    id: 'strudel',
+    time: '2026-07-26T14:30',
+    title: {
+      en: 'Strudel tasting',
+      hu: 'Rétesezés',
+    },
+    description: {
+      en: 'Fresh Hungarian strudel tasting.',
+      hu: 'Friss, hagyományos rétesek kóstolása.',
+    },
+  },
+  {
+    id: 'abel-eszti',
+    time: '2026-07-26T10:00',
+    title: {
+      en: 'Visit Ábel and Eszti',
+      hu: 'Ábel és Eszti meglátogatása',
+    },
+    location: {
+      en: 'Győr, Kagyló Street 12',
+      hu: 'Győr, Kagyló u. 12',
+    },
+    mapQuery: '47.70150146544114,17.642393145647244',
+    description: {
+      en: 'Checking out their new place.',
+      hu: 'Checking out their new place.',
+    },
+  },
+  {
+    id: 'boating',
+    time: '2026-07-26T17:30',
+    title: {
+      en: 'Boating in Győr',
+      hu: 'Hajókázás Győrben',
+    },
+    location: {
+      en: 'Győr, Töltésszer 18',
+      hu: 'Győr, Töltésszer 18',
+    },
+    mapQuery: '47.69158105648993,17.623983897160787',
+    description: {
+      en: 'Scenic boat ride along the rivers of Győr.',
+      hu: 'Sétahajózás Győr folyóin.',
+    },
+  },
+  {
+    id: 'second-dinner',
+    time: '2026-07-26T19:30',
+    title: {
+      en: 'Dinner at Apátúr Restaurant',
+      hu: 'Vacsora az Apátúr étteremben',
+    },
+    location: {
+      en: 'Győr, Széchenyi Square 7',
+      hu: 'Győr, Széchenyi tér 7',
+    },
+    mapQuery: '47.68833796677193,17.634816098082922',
+    description: {
+      en: 'Dinner at Apátúr Restaurant in downtown Győr.',
+      hu: 'Vacsora az Apátúr étteremben Győr belvárosában.',
     },
   },
 
-  // ── Thursday 23 July — home ─────────────────────────────────────────────────
+  // ── Monday 27 July ─────────────────────────────────────────────
   {
-    id: 'flight-home',
-    time: '2026-07-23T11:15',
+    id: 'automobile-museum',
+    time: '2026-07-27T11:00',
     title: {
-      en: 'Flight home',
-      hu: 'Hazaút',
+      en: 'Automobile museum in Dörgicse',
+      hu: 'Autómúzeum Dörgicsén',
     },
     location: {
-      en: 'Liszt Ferenc Airport, Terminal 2B',
-      hu: 'Liszt Ferenc repülőtér, 2B terminál',
+      en: 'Dörgicse, Csörgőfa Street 33/2',
+      hu: 'Dörgicse, Csörgőfa u. 33/2',
     },
-    mapQuery: '47.4370,19.2611',
+    mapQuery: '46.91936131734491,17.72269773720829',
     description: {
-      en: 'Drop the car at the rental return by 09:30, then bags and security.',
-      hu: 'Az autót 09:30-ig le kell adni a kölcsönzőnél, aztán csomagfeladás és biztonsági ellenőrzés.',
+      en: 'Classic car collection at Kaáli Automobile Museum.',
+      hu: 'Veterán autógyűjtemény a Kaáli Autómúzeumban.',
+    },
+  },
+  {
+    id: 'balatonfuzfo',
+    time: '2026-07-27T15:00',
+    title: {
+      en: 'Bobsledding in Balatonfűzfő',
+      hu: 'Bobozás Balatonfűzfőn',
+    },
+    location: {
+      en: 'Balatonfűzfő, Uszoda Street 2',
+      hu: 'Balatonfűzfő, Uszoda u. 2',
+    },
+    mapQuery: '47.07063936676224,18.026400481286494',
+    description: {
+      en: 'Bobsledding at Balatonfűzfő Leisure Park.',
+      hu: 'Bobozás a fűzfői szabadidőparkban.',
+    },
+  },
+  {
+    id: 'balaton',
+    time: '2026-07-27T18:00',
+    title: {
+      en: 'Relaxing by Lake Balaton',
+      hu: 'Láblógatás a Balatonnál',
+    },
+    description: {
+      en: 'Relaxing and swimming by Lake Balaton.',
+      hu: 'Csobbanás és pihenés a Balaton-parton.',
+    },
+  },
+  {
+    id: 'gant-dinner',
+    time: '2026-07-27T19:30',
+    title: {
+      en: 'Dinner at Vértes Restaurant',
+      hu: 'Vacsora a Vértes Vendéglőben',
+    },
+    location: {
+      en: 'Gánt, Hegyalja Road 59',
+      hu: 'Gánt, Hegyalja út 59',
+    },
+    mapQuery: '47.390023882795944,18.387840650980763',
+    description: {
+      en: 'Dinner at Vértes Restaurant in Gánt.',
+      hu: 'Vacsora a gánti Vértes Vendéglőben.',
+    },
+  },
+
+  // ── Tuesday 28 July ─────────────────────────────────────────────────
+  {
+    id: 'fort-monostor',
+    time: '2026-07-28T12:00',
+    title: {
+      en: 'Visit Fort Monostor',
+      hu: 'Monostori erőd meglátogatása',
+    },
+    location: {
+      en: 'Komárom, Danube bank',
+      hu: 'Komárom, Duna-part',
+    },
+    mapQuery: '47.75070871364798,18.097160361690793',
+    description: {
+      en: 'Exploring the 19th-century Danube fortress.',
+      hu: 'A 19. századi Duna-parti erődítmény felfedezése.',
+    },
+  },
+  {
+    id: 'last-dinner',
+    time: '2026-07-28T18:00',
+    title: {
+      en: "Dinner at Grandma's",
+      hu: 'Vacsora Tercsi mamáéknál',
+    },
+    location: {
+      en: 'Bábolna, Kossuth Lajos Street 8',
+      hu: 'Bábolna, Kossuth Lajos u. 8',
+    },
+    description: {
+      en: 'Dinner on our final evening.',
+      hu: 'Vacsora az utolsó estén.',
     },
   },
 ]
