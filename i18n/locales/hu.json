@@ -15,5 +15,14 @@
     "wrongPassphrase": "Helytelen jelszó.",
     "offline": "Nem sikerült elérni a programot. Ellenőrizd a kapcsolatot, és próbáld újra.",
     "insecureContext": "Ezt az oldalt https-en kell megnyitni. A böngésző sima http címen letiltja a visszafejtést."
+  },
+  "install": {
+    "title": "Hozzáadás a kezdőképernyőhöz",
+    "hint": "Alkalmazásként nyílik meg, és térerő nélkül is működik.",
+    "action": "Telepítés",
+    "dismiss": "Most nem"
+  },
+  "photos": {
+    "open": "Úti fotók"
   }
 }

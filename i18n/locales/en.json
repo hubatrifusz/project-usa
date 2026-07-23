@@ -15,5 +15,14 @@
     "wrongPassphrase": "That passphrase didn't work. Check for typos.",
     "offline": "That didn't work. Check your connection and try again.",
     "insecureContext": "This page has to be opened over https. Browsers block decryption on a plain http address."
+  },
+  "install": {
+    "title": "Add to home screen",
+    "hint": "Opens like an app, and works without signal.",
+    "action": "Install",
+    "dismiss": "Not now"
+  },
+  "photos": {
+    "open": "Trip photos"
   }
 }

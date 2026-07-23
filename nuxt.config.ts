@@ -4,19 +4,21 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      photosAlbumUrl: 'https://photos.app.goo.gl/wvyLTLCEraaKRDBr9',
+    },
+  },
   app: {
     head: {
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        // Added by hand: Vite's index.html transform doesn't run on Nuxt-generated HTML,
-        // so without this there's no install prompt on any platform.
+
         { rel: 'manifest', href: '/manifest.webmanifest' },
       ],
       meta: [
-        // A private itinerary has no business in a search index.
         { name: 'robots', content: 'noindex, nofollow' },
-        // iOS reads these rather than the manifest for home-screen behaviour.
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-title', content: 'Trip' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
@@ -38,7 +40,6 @@ export default defineNuxtConfig({
       icons: [
         { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
         { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
-        // Android crops this one to its own shape, so it carries extra padding.
         { src: '/icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
       ],
     },
@@ -57,7 +58,8 @@ export default defineNuxtConfig({
       ],
       cleanupOutdatedCaches: true,
     },
-    client: { installPrompt: true },
+    // The string is the localStorage key used to remember "not now".
+    client: { installPrompt: 'trip:install-dismissed' },
     devOptions: { enabled: false },
   },
   fonts: {

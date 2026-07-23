@@ -8,5 +8,10 @@ useHead(head)
   <UApp>
     <NuxtRouteAnnouncer />
     <NuxtPage />
+
+    <!-- Sits above both the gate and the timeline; only appears when installable. -->
+    <ClientOnly>
+      <InstallPrompt />
+    </ClientOnly>
   </UApp>
 </template>

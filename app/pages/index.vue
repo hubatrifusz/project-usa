@@ -224,19 +224,23 @@ const todayKey = computed(() => (now.value ? tripDateKey(now.value) : null))
           {{ t('title') }}
         </h1>
 
-        <div class="flex gap-0.5 rounded-full bg-elevated p-0.5">
-          <UButton
-            v-for="l in locales"
-            :key="l.code"
-            size="xs"
-            color="neutral"
-            class="rounded-full"
-            :variant="l.code === locale ? 'solid' : 'ghost'"
-            :aria-current="l.code === locale ? 'true' : undefined"
-            @click="setLocale(l.code)"
-          >
-            {{ l.code.toUpperCase() }}
-          </UButton>
+        <div class="flex items-center gap-2">
+          <TripPhotos />
+
+          <div class="flex gap-0.5 rounded-full bg-elevated p-0.5">
+            <UButton
+              v-for="l in locales"
+              :key="l.code"
+              size="xs"
+              color="neutral"
+              class="rounded-full"
+              :variant="l.code === locale ? 'solid' : 'ghost'"
+              :aria-current="l.code === locale ? 'true' : undefined"
+              @click="setLocale(l.code)"
+            >
+              {{ l.code.toUpperCase() }}
+            </UButton>
+          </div>
         </div>
       </header>
 
