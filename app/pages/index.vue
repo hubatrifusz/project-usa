@@ -24,16 +24,17 @@ function navUrl(event: VacationEvent) {
   const coords = raw.match(/^(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)$/)
 
   if (coords) {
-    // Never percent-encode this comma — Waze and Android's geo: parser both reject `%2C`.
+    // Never percent-encode this comma — Android's google.navigation: parser rejects `%2C`.
     const ll = `${coords[1]},${coords[2]}`
-    if (platform.value === 'android') return `geo:${ll}`
+    // geo: only drops a pin; google.navigation: launches Maps straight into turn-by-turn guidance.
+    if (platform.value === 'android') return `google.navigation:q=${ll}&mode=d`
     if (platform.value === 'ios') return `maps:?daddr=${ll}&dirflg=d`
     return `https://www.google.com/maps/dir/?api=1&destination=${ll}`
   }
 
-  // Free text: `geo:0,0?q=…` is the documented Android form but Waze ignores the `q` and
-  // tries to drive to 0,0, so anything without coordinates goes to Google Maps instead.
+  // Free text: google.navigation: also takes a plain address and starts guidance directly.
   const q = encodeURIComponent(raw)
+  if (platform.value === 'android') return `google.navigation:q=${q}&mode=d`
   if (platform.value === 'ios') return `maps:?daddr=${q}&dirflg=d`
   return `https://www.google.com/maps/dir/?api=1&destination=${q}`
 }
