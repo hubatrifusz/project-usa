@@ -144,6 +144,23 @@ export const events: VacationEvent[] = [
     },
   },
   {
+    id: 'abel-eszti',
+    time: '2026-07-26T12:00',
+    title: {
+      en: 'Visit Ábel and Eszti',
+      hu: 'Ábel és Eszti meglátogatása',
+    },
+    location: {
+      en: 'Győr, Kagyló Street 12',
+      hu: 'Győr, Kagyló u. 12',
+    },
+    mapQuery: '47.70150146544114,17.642393145647244',
+    description: {
+      en: 'Checking out their new place.',
+      hu: 'Checking out their new place.',
+    },
+  },
+  {
     id: 'puspokvar',
     time: '2026-07-26T13:00',
     title: {
@@ -170,23 +187,6 @@ export const events: VacationEvent[] = [
     description: {
       en: 'Fresh Hungarian strudel tasting.',
       hu: 'Friss, hagyományos rétesek kóstolása.',
-    },
-  },
-  {
-    id: 'abel-eszti',
-    time: '2026-07-26T10:00',
-    title: {
-      en: 'Visit Ábel and Eszti',
-      hu: 'Ábel és Eszti meglátogatása',
-    },
-    location: {
-      en: 'Győr, Kagyló Street 12',
-      hu: 'Győr, Kagyló u. 12',
-    },
-    mapQuery: '47.70150146544114,17.642393145647244',
-    description: {
-      en: 'Checking out their new place.',
-      hu: 'Checking out their new place.',
     },
   },
   {
