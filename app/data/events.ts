@@ -157,7 +157,7 @@ export const events: VacationEvent[] = [
     mapQuery: '47.70150146544114,17.642393145647244',
     description: {
       en: 'Checking out their new place.',
-      hu: 'Checking out their new place.',
+      hu: 'Lakáslátogatás',
     },
   },
   {
